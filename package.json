@@ -4,8 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start:prod": "node server.js",
+    "seed": "node scripts/seedDB.js",
+    "client": "cd client && npm run start",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,7 @@
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "mongodb": "^3.6.3",
-    "mongoose": "^5.11.11"
+    "mongoose": "^5.11.11",
+    "mongoose-type-url": "^2.1.0"
   }
 }
