@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
     title: { type: String, required: true },
-    authors: { type: String, required: true },
+    authors: [{ type: String, required: true }],
     description: String,
     url: {
         image: { type: mongoose.SchemaTypes.Url, required: true },
@@ -12,7 +12,7 @@ const bookSchema = new Schema({
     }
 });
 
-const Books = mongoose.model("Books", bookSchema);
+const Books = mongoose.model("books", bookSchema);
 
 module.exports = Books;
 

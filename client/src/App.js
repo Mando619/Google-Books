@@ -1,12 +1,27 @@
 
 import React from 'react';
-import Nav from './components/Nav';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Nav from './Components/Nav/Nav';
+import Header from './Components/Header';
+import Saved from './Components/Saved';
+import Search from './Components/Search';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Nav />
-    </div>
+      <Switch>
+        <Route exact path="/">
+          <Header></Header>
+        </Route>
+        <Route path="/saved">
+          <Saved></Saved>
+        </Route>
+        <Route path="/search">
+          <Search></Search>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
