@@ -1,11 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-
-
-
-
-
-
+import API from "./Utilities";
 
 // // async because its coming from database
 
@@ -20,19 +15,24 @@ import React, { useState, useEffect } from 'react';
 // useEffect(() => {
 //     fetchItems();
 // }, []);
+const [search, setSearch] = useState([
+
+]);
 
 
 function Search() {
     return (
         <div>
             <div className="search_container">
-                <div className="card">
-                    <div className="row">
-                        <div className="form">
-                            <label>Book</label>
-                            <input type="text">
-                            </input>
-                        </div>
+                <div className="form">
+                    <div className="form">
+                        <label htmlFor="search">Book:</label>
+                        <input 
+                        type="text"
+                        onChange={handleChange}>
+
+                        
+                        </input>
                     </div>
                 </div>
             </div>
